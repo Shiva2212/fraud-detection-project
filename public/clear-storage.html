@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage Cleared - Fraud Detection System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .icon { font-size: 64px; margin-bottom: 20px; animation: bounce 1s infinite; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        h1 { color: #1e293b; font-size: 32px; margin-bottom: 15px; font-weight: 700; }
+        .success { color: #22c55e; font-weight: bold; font-size: 24px; margin: 20px 0; }
+        p { color: #64748b; font-size: 16px; margin: 15px 0; line-height: 1.6; }
+        ul { text-align: left; color: #64748b; margin: 20px auto; padding-left: 20px; max-width: 400px; }
+        li { margin: 10px 0; font-size: 15px; }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 16px 40px; border-radius: 12px;
+            font-size: 18px; font-weight: 600; cursor: pointer; margin-top: 30px;
+            transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6); }
+        .user-info {
+            margin-top: 30px; padding-top: 20px; border-top: 2px solid #e2e8f0;
+            font-size: 14px; color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🧹</div>
+        <h1>Complete System Reset</h1>
+        <p class="success">✅ All Data Cleared!</p>
+        <p>The system has been completely reset:</p>
+        <ul>
+            <li>✓ MongoDB Database Dropped</li>
+            <li>✓ All Transactions Deleted</li>
+            <li>✓ All Alerts Cleared</li>
+            <li>✓ Account Profiles Reset</li>
+            <li>✓ Browser LocalStorage Cleared</li>
+        </ul>
+        <button class="btn" onclick="window.location.href='/'">🚀 Go to Dashboard</button>
+        <div class="user-info">
+            👤 User: <strong>sukshamrainaa</strong><br>
+            🕐 Cleaned: <strong>2025-11-04 20:29:13 UTC</strong>
+        </div>
+    </div>
+    <script>
+        localStorage.removeItem('fraudDetection_transactions');
+        localStorage.removeItem('fraudDetection_alerts');
+        localStorage.removeItem('fraudDetection_profiles');
+        localStorage.clear();
+        sessionStorage.clear();
+        console.log('✅ All storage cleared by sukshamrainaa at 2025-11-04 20:29:13 UTC');
+    </script>
+</body>
+</html>
